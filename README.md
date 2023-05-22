@@ -17,5 +17,7 @@ Extract the files in the "input_files.tar.gz". On extraction the "input_files" d
 
 
 Run command
+
 python3 merging_UCSC_Ensembl_gtfs.py <path_to-ucsc_refseq.gtf> <path_to-all_miso.gtf> <path_to-removed_overlapped_ensembl.gtf> <output_file>
+
 cat <output_file> <path_to-overlapping_genes.gtf> > merged.gtf
