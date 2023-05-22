@@ -1138,7 +1138,6 @@ class CheckOverlaps(UCSCGencodeComprehensive, SplicingMISOFeatures, EnsemblGTFs)
 
     def merge_descriptions_for_final_gtf_bak(self):
 
-        #fh = open("/home/vineet/Documents/ForGithub/Making_combined_gtf/output_files/HG19_Ens_UCSC_combined_ucsc_refseq_new.gtf", "w")
         fh = open(self.merged_fn, "w")
 
         chrmsm_list = ["chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10","chr11","chr12","chr13",
