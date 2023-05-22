@@ -9,7 +9,7 @@ Miso annotations "all_miso.gtf" from MISO version v2.0 were used and were mapped
     This was done to only incorporate miso annotations for splicing analysis that were represented in modern upto-date hg19 annotations.
 
 
-Extract the files in the "input_files.tar.gz". On extraction the "input_files" directory should contain:
+Extract the files in the "input_files.tar.xz". On extraction the "input_files" directory should contain:
   all_miso.gtf,
   overlapping_genes.gtf,
   removed_overlapped_ensembl.gtf,
