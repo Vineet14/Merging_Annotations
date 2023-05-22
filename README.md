@@ -10,9 +10,9 @@ Miso annotations "all_miso.gtf" from MISO version v2.0 were used and were mapped
 
 
 Extract the files in the "input_files.tar.gz". On extraction the "input_files" directory should contain:
-  all_miso.gtf
-  overlapping_genes.gtf
-  removed_overlapped_ensembl.gtf
+  all_miso.gtf,
+  overlapping_genes.gtf,
+  removed_overlapped_ensembl.gtf,
   ucsc_refseq.gtf
 
 
