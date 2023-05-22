@@ -1,8 +1,3 @@
-# Testing if UCSC_Gencode_download has all the exons of the ensembl as well as ucsc as well as miso annotations
-# First check if it has all the miso annotations
-# 2nd check if it has all the UCSC annotations
-# 3rd check if it has all the ensembl annotations
-
 # author: Vineet Sharma
 # Dated : 30th September 2019
 
@@ -1193,8 +1188,4 @@ class CheckOverlaps(UCSCGencodeComprehensive, SplicingMISOFeatures, EnsemblGTFs)
 
 if __name__ == "__main__":
     data = CheckOverlaps(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
-    #data = CheckOverlaps("/home/vineet/Documents/ForGithub/Making_combined_gtf/input_files/tester_mod_ucsc_refseq.gtf",
-    #                     "/home/vineet/Documents/ForGithub/Making_combined_gtf/input_files/all_Miso.gtf",
-    #                     "/home/vineet/Documents/ForGithub/Making_combined_gtf/input_files/removed_overlapped_ensembl.gtf")
-
     data.merge_descriptions_for_final_gtf_bak()
