@@ -16,7 +16,7 @@ Genes which overlapped with each other "overlapping_genes.gtf" were removed befo
     and subsequently added to the final merge. 
 
 Miso annotations "all_miso.gtf" from MISO version v2.0 were used and were mapped back to the merged gtf files. 
-    This was done to only incorporate miso annotations for splicing analysis that were represented in modern upto-date hg19 annotations.
+    This was done to only identify miso annotations for splicing analysis that were represented in modern upto-date hg19 annotations.
 
 Run command
 
