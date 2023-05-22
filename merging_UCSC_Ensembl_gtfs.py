@@ -944,6 +944,7 @@ class CheckOverlaps(UCSCGencodeComprehensive, SplicingMISOFeatures, EnsemblGTFs)
                                           gene_dict_pointer, upstream_gene_dict_pointer, downstream_gene_dict_pointer):
 
         """
+        USES RECURSION
         check if the important coordinates are present in the gene/transcripts;
         if not test if the upstream or the downstream coordinates are present in the gene identified.
         If none of the above works then test whether the coordinates are in the upstream or in the downstream genes.
