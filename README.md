@@ -23,3 +23,9 @@ Run command
 python3 merging_UCSC_Ensembl_gtfs.py <path_to-ucsc_refseq.gtf> <path_to-all_miso.gtf> <path_to-removed_overlapped_ensembl.gtf> <output_merged_file>
 
 cat <output_merged_file> <path_to-overlapping_genes.gtf> > merged.gtf
+
+# FOR generation of the miso file with filtered miso annotations present in the merged file
+
+This script is to identify miso annotations present in the merge of the upto0date standard annotation from ensembl and ucsc repositories
+
+python3 Modifying_Miso_annotation.py <output_merged_file> <path_to-all_miso.gtf> <final miso filtered file>
