@@ -312,7 +312,7 @@ class SplicingMISOFeatures(ReadGTFFile):
                         self.miso_geneid_dict["A5SS"][gene_id]["before"].append((check_a5ss[1], s1))
                     else:
                         self.miso_geneid_dict["A5SS"][gene_id]["after"].append((check_a5ss[1], check_a5ss[2]))
-
+:return:
         if miso_class == "MXE":
             if "MXE" not in self.miso_geneid_dict.keys():
                 self.miso_geneid_dict["MXE"] = {}
@@ -379,9 +379,10 @@ class SplicingMISOFeatures(ReadGTFFile):
 
 class MergingMergedMISO(ReadMergedFile, SplicingMISOFeatures):
 
-    def __init__(self, merged_fn, miso_fn):
+    def __init__(self, merged_fn, miso_fn, final_fn):
         self.merged_fn = merged_fn
         self.miso_fn = miso_fn
+        self.final_fn = final_fn
         ReadMergedFile.__init__(self, self.merged_fn)
         SplicingMISOFeatures.__init__(self, self.miso_fn)
         self.miso_id_to_keep = self.start_test()
@@ -459,8 +460,7 @@ class MergingMergedMISO(ReadMergedFile, SplicingMISOFeatures):
         return events_to_be_kept
 
     def write_new_miso_file(self):
-
-        fh = open("/Users/vs804/Desktop/HG19_new_all_miso_UCSC_Refseqmerged.gtf", "w")
+        fh = open(self.final_fn, "w")
 
         for gene, lines in self.gene_id_lines.items():
             if gene in self.miso_id_to_keep:
@@ -474,7 +474,9 @@ class MergingMergedMISO(ReadMergedFile, SplicingMISOFeatures):
 
 
 if __name__ == "__main__":
+    
+    data = MergingMergedMISO(sys.argv[1], sys.argv[2], sys.argv[3])
 
-    data = MergingMergedMISO("/Users/vs804/Desktop/HG19_UCSC_ref_merged.gtf",
-                             "/Users/vs804/PycharmProjects/HumanMergingGTFs/GTFs/hg19_MISO/all_Miso.gtf")
+    #data = MergingMergedMISO("/Users/vs804/Desktop/HG19_UCSC_ref_merged.gtf",
+    #                         "/Users/vs804/PycharmProjects/HumanMergingGTFs/GTFs/hg19_MISO/all_Miso.gtf")
     data.write_new_miso_file()
