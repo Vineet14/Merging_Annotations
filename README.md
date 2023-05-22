@@ -13,7 +13,7 @@ Ensembl annotations were used as a base for the merging of annotations.
 All ucsc transcripts with overlap with Ensembl annotations were removed while preparing the merge.
 
 Genes which overlapped with each other "overlapping_genes.gtf" were removed before the merge 
-    and subsequently added to the final merge. This was to simplify the merge for the immediate use for internal projects.
+    and subsequently added to the final merge. 
 
 Miso annotations "all_miso.gtf" from MISO version v2.0 were used and were mapped back to the merged gtf files. 
     This was done to only incorporate miso annotations for splicing analysis that were represented in modern upto-date hg19 annotations.
