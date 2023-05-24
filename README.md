@@ -6,7 +6,7 @@ Extract the files in the "input_files.tar.xz". On extraction the "input_files" d
   removed_overlapped_ensembl.gtf,
   ucsc_refseq.gtf
 
-hg19 versions hg37.87 annotations "removed_overlapped_ensembl.gtf" from Ensembl were used with UCSC refseq annotations "ucsc_refseq.gtf" to be merged.
+hg19 versions hg37.87 annotations "removed_overlapped_ensembl.gtf" from Ensembl were used with cotemporary UCSC refseq annotations "ucsc_refseq.gtf" to be merged.
 
 Ensembl annotations were used as a base for the merging of annotations.
 
