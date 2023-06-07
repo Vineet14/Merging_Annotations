@@ -1,5 +1,7 @@
 # Merging_Annotations
 
+### An effort to merge Ensembl and UCSC "hg19" annotations for use in splicing analysis and filter Miso v2.0 annotations.
+
 Extract the files in the "input_files.tar.xz". On extraction the "input_files" directory should contain:
   all_miso.gtf,
   overlapping_genes.gtf,
